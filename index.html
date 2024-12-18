@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Valorant Agents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="text-white bg-gradient-to-b from-[#12222B] via-[#12222B] to-[#FF4654] min-h-screen font-sans"
+    id="theme-body">
+
+    <div class="flex flex-col min-h-screen">
+        <!-- Navbar -->
+        <header class="flex items-center justify-between p-4 bg-[#12222B] text-[#FF4654] transition-all">
+
+            <!-- Menu hamburguesa-->
+            <button id="menu-btn" class="text-[#FF4654] block md:hidden">
+                <div class="space-y-1">
+                    <div class="w-6 h-1 bg-[#FF4654]"></div>
+                    <div class="w-6 h-1 bg-[#FF4654]"></div>
+                    <div class="w-6 h-1 bg-[#FF4654]"></div>
+                </div>
+            </button>
+            <div id="menu" class="hidden absolute bg-[#12222B] text-[#FF4654] p-4 w-30 h-30 top-16 left-0 text-2xl">
+                <ul>
+                    <li><a href="index.html" class="block py-2">Agents</a></li>
+                    <li><a href="./maps/index.html" class="block py-2">Maps</a></li>
+                    <li><a href="./weapons/index.html" class="block py-2">Weapons</a></li>
+                </ul>
+            </div>
+
+            <!-- Contenedor de enlaces -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-xl">Agents</a>
+                <a href="./maps/index.html" class="text-xl">Maps</a>
+                <a href="./weapons/index.html" class="text-xl">Weapons</a>
+            </div>
+
+            <!-- Titulo -->
+            <h1 class="text-4xl font-bold text-[#FF4654] lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
+                Valorant</h1>
+
+            <!-- Toggle Switch -->
+            <label class="relative inline-flex items-center cursor-pointer ">
+                <input type="checkbox" value="" class="sr-only peer" id="toggle-theme" />
+                <div class="w-14 h-7 bg-[#224051] rounded-full peer-checked:bg-[#FFEEEF] transition-all"></div>
+                <span
+                    class="absolute left-1 top-1 w-5 h-5 bg-[#FF4654] rounded-full peer-checked:translate-x-7 transition-all "></span>
+            </label>
+        </header>
+
+        <!-- Contenedor de imagenes -->
+        <main id="agents-container" class="flex flex-wrap justify-center gap-4 md:gap-8 lg:gap-12 p-4 flex-grow"></main>
+
+        <!-- Footer -->
+        <footer
+            class="text-center md:text-left text-sm p-4 bg-[#E84756] text-white transition-all mt-4 flex flex-col md:flex-row justify-between">
+            <div>
+                <p>© Copyright Valorant-API. All Rights Reserved</p>
+                <p>Valorant-API is a non-official API and not endorsed by Riot Games in any way.</p>
+                <p>Riot Games, Valorant, and all associated properties are trademarks of Riot Games, Inc.</p>
+            </div>
+            <div class="flex justify-center md:justify-end mt-4 md:mt-0 space-x-8 text-white">
+                <button class="text-4xl md:text-4xl lg:text-5xl">
+                    <i class="fa-brands fa-discord"></i>
+                </button>
+                <button class="text-4xl md:text-4xl lg:text-5xl">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </button>
+                <button class="text-4xl md:text-4xl lg:text-5xl">
+                    <i class="fa-brands fa-github"></i>
+                </button>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
